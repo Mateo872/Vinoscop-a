@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 header {
-  height: 14rem;
+  height: 20rem;
   width: 100%;
   background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../images/banner.jpg");
   background-size: cover;
@@ -68,7 +68,7 @@ header .logo_container img {
   width: 2rem;
 }
 header .container_carac {
-  margin-top: 1rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -76,17 +76,17 @@ header .container_carac {
   color: #fff;
 }
 header .container_carac h1 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #ff8500;
   font-weight: bold;
 }
 header .container_carac p {
-  width: 55%;
+  width: 70%;
   margin: 0.6rem auto;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 header .container_carac i {
-  margin-top: 1rem;
+  margin-top: 3.5rem;
   font-size: 0.8rem;
 }
 
@@ -142,6 +142,7 @@ header .container_carac i {
     font-size: 1rem;
   }
   header .container_carac i {
+    margin-top: 1rem;
     font-size: 0.8rem;
   }
 }
