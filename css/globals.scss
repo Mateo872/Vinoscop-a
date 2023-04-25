@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 
 @import "variables";
+@import "header";
 
 * {
   margin: 0;
@@ -11,4 +12,25 @@
 body {
   font-family: "Montserrat", sans-serif;
   background: #161616;
+}
+
+h1,
+p {
+  margin-bottom: 0;
+}
+
+.wave {
+  margin-top: -2.6rem;
+}
+
+@media (min-width: 767px) {
+  .wave {
+    margin-top: -4rem;
+  }
+}
+
+@media (min-width: 989px) {
+  .wave {
+    margin-top: -7rem;
+  }
 }
