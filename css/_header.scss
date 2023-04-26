@@ -176,10 +176,6 @@ header {
       .bi-gear-fill {
         font-size: 1.5rem;
         cursor: pointer;
-        &:hover {
-          color: $color-primary;
-          transition: 0.3s;
-        }
       }
       .nav_container_md {
         ul {
@@ -199,11 +195,7 @@ header {
         align-items: center;
         gap: 0.8rem;
         font-size: 1.5rem;
-        &:hover {
-          cursor: pointer;
-          color: $color-primary;
-          transition: 0.3s;
-        }
+        cursor: pointer;
       }
     }
     .container_carac {

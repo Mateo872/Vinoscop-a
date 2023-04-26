@@ -174,10 +174,6 @@ header .container_carac i {
     font-size: 1.5rem;
     cursor: pointer;
   }
-  header nav .bi-gear-fill:hover {
-    color: #ff8500;
-    transition: 0.3s;
-  }
   header nav .nav_container_md ul {
     padding: 0.6rem 1.2rem;
     font-size: 0.8rem;
@@ -194,11 +190,7 @@ header .container_carac i {
     align-items: center;
     gap: 0.8rem;
     font-size: 1.5rem;
-  }
-  header nav .cart_container:hover {
     cursor: pointer;
-    color: #ff8500;
-    transition: 0.3s;
   }
   header .container_carac {
     margin-top: 4rem;
