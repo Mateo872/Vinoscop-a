@@ -86,17 +86,17 @@ header .container_carac {
   animation-delay: 1.3s;
 }
 header .container_carac h1 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ff8500;
   font-weight: bold;
 }
 header .container_carac p {
   width: 55%;
   margin: 0.6rem auto;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 header .container_carac i {
-  margin-top: 6rem;
+  margin-top: 6.5rem;
   font-size: 0.8rem;
   animation: arrow 0.8s forwards;
   opacity: 0;
