@@ -257,7 +257,6 @@ header .container_carac i {
   overflow-y: hidden;
   scroll-snap-type: x proximity;
   padding: 0;
-  margin-bottom: 209rem;
 }
 .container_services::-webkit-scrollbar {
   width: 0;
@@ -312,6 +311,96 @@ header .container_carac i {
     font-size: 0.8rem;
   }
 }
+.container_categories .categories {
+  margin-bottom: 200rem;
+}
+.container_categories .categories .container_slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.container_categories .categories .container_slider .categories_slider {
+  width: 30rem;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.8rem 0;
+}
+.container_categories .categories .container_slider .categories_slider .slider {
+  display: flex;
+  gap: 0.8rem;
+}
+.container_categories .categories .container_slider .categories_slider .slider .categorie {
+  width: 6.5rem;
+  height: 6.5rem;
+  background-size: cover;
+  position: relative;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.container_categories .categories .container_slider .categories_slider .categorie_one {
+  background-image: url("../images/vinos.jpg");
+}
+.container_categories .categories .container_slider .categories_slider .categorie_two {
+  background-image: url("../images/champagnes.jpg");
+}
+.container_categories .categories .container_slider .categories_slider .categorie_three {
+  background-image: url("../images/gins.jpg");
+}
+.container_categories .categories .container_slider .categories_slider .categorie_four {
+  background-image: url("../images/cervezas.jpg");
+}
+.container_categories .categories .container_slider .categories_slider .categorie_five {
+  background-image: url("../images/vodkas.jpg");
+}
+.container_categories .categories .container_slider .categories_slider .categorie_six {
+  background-image: url("../images/tragos.jpg");
+}
+.container_categories .categories .container_slider .categories_slider::-webkit-scrollbar {
+  width: 0;
+}
+.container_categories .categories .container_slider .bi-chevron-left {
+  padding-right: 0.5rem;
+}
+.container_categories .categories .container_slider .bi-chevron-right {
+  padding-left: 0.5rem;
+}
+
+@media (min-width: 767px) {
+  .container_categories .categories .container_slider .categories_slider .slider {
+    gap: 2.5rem;
+  }
+  .container_categories .categories .container_slider .categories_slider .slider .categorie {
+    width: 10rem;
+    height: 10rem;
+  }
+  .container_categories .categories .container_slider .arrow_slider {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 989px) {
+  .container_categories .categories .container_slider {
+    gap: 3rem;
+  }
+  .container_categories .categories .container_slider .categories_slider {
+    width: 83%;
+  }
+  .container_categories .categories .container_slider .categories_slider .slider .categorie {
+    width: 13.5rem;
+    height: 13.5rem;
+  }
+  .container_categories .categories .container_slider .arrow_slider {
+    cursor: pointer;
+    font-size: 1.4rem;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+  .container_categories .categories .container_slider .arrow_slider:hover {
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -339,6 +428,14 @@ section {
   margin-top: -2.6rem;
 }
 
+.title_section {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #ff8500;
+}
+
 @media (min-width: 767px) {
   section {
     padding: 1rem 2rem;
@@ -346,9 +443,17 @@ section {
   .wave {
     margin-top: -4rem;
   }
+  .title_section {
+    margin: 2rem 0;
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 989px) {
   .wave {
     margin-top: -7rem;
+  }
+  .title_section {
+    margin: 6rem 0 4rem;
+    font-size: 1.8rem;
   }
 }/*# sourceMappingURL=globals.css.map */

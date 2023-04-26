@@ -38,3 +38,35 @@ window.addEventListener("scroll", () => {
     link_header.forEach((link) => (link.style.color = "#fff"));
   }
 });
+
+const categories_slider = document.querySelector(".categories_slider"),
+  arrowRight = document.querySelector(".bi-chevron-right"),
+  arrowLeft = document.querySelector(".bi-chevron-left");
+
+arrowRight.addEventListener("click", () => {
+  if (window.innerWidth >= 989) {
+    categories_slider.scrollBy({
+      left: 300,
+      behavior: "smooth",
+    });
+  } else {
+    categories_slider.scrollBy({
+      left: 150,
+      behavior: "smooth",
+    });
+  }
+});
+
+arrowLeft.addEventListener("click", () => {
+  if (window.innerWidth >= 989) {
+    categories_slider.scrollBy({
+      left: -300,
+      behavior: "smooth",
+    });
+  } else {
+    categories_slider.scrollBy({
+      left: -150,
+      behavior: "smooth",
+    });
+  }
+});
