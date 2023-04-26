@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 header {
-  height: 14rem;
   width: 100%;
+  height: 25rem;
   background-image: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)), url("../images/banner.jpg");
   background-size: cover;
   background-position: 50%;
+  padding-top: 10rem;
 }
 header nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,6 +16,12 @@ header nav {
   color: #fff;
   padding: 1rem;
   padding-bottom: 0;
+  position: fixed;
+  top: 0;
+  margin-bottom: 20rem;
+  animation: header 0.6s forwards;
+  opacity: 0;
+  animation-delay: 1s;
 }
 header nav .nav_container {
   display: flex;
@@ -68,12 +76,14 @@ header .logo_container img {
   width: 2rem;
 }
 header .container_carac {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   color: #fff;
+  animation: carac 0.8s forwards;
+  opacity: 0;
+  animation-delay: 1.3s;
 }
 header .container_carac h1 {
   font-size: 1rem;
@@ -86,13 +96,17 @@ header .container_carac p {
   font-size: 0.8rem;
 }
 header .container_carac i {
-  margin-top: 1rem;
+  margin-top: 6rem;
   font-size: 0.8rem;
+  animation: arrow 0.8s forwards;
+  opacity: 0;
+  animation-delay: 1.6s;
 }
 
 @media (min-width: 767px) {
   header {
-    height: 21.5rem;
+    height: 28rem;
+    padding-top: 6rem;
   }
   header nav {
     padding: 1rem 2rem;
@@ -142,15 +156,15 @@ header .container_carac i {
     font-size: 1rem;
   }
   header .container_carac i {
+    margin-top: 5.5rem;
     font-size: 0.8rem;
   }
 }
 @media (min-width: 989px) {
   header {
-    height: 32rem;
-  }
-  header nav {
-    padding: 1rem 2rem;
+    height: 38rem;
+    background-attachment: fixed;
+    padding-top: 7rem;
   }
   header nav .bi-gear-fill {
     font-size: 1.5rem;
@@ -197,10 +211,99 @@ header .container_carac i {
     font-size: 1.3rem;
   }
   header .container_carac i {
-    margin-top: 4rem;
+    margin-top: 7rem;
     font-size: 1.2rem;
     z-index: 1;
     cursor: pointer;
+  }
+}
+@keyframes header {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes carac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes arrow {
+  from {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+.container_services {
+  width: 90%;
+  margin: 1.5rem auto 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding: 0;
+}
+.container_services .services {
+  width: 42rem;
+  display: flex;
+  justify-content: space-between;
+}
+.container_services .services .service {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  scroll-snap-align: center;
+}
+.container_services .services .service i {
+  color: #ff8500;
+  font-size: 1.3rem;
+}
+.container_services .services .service h4 {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #000;
+}
+.container_services .services .service p {
+  font-size: 0.6rem;
+  color: #959595;
+}
+
+@media (min-width: 767px) {
+  .container_services .services {
+    width: 100%;
+  }
+}
+@media (min-width: 989px) {
+  .container_services {
+    margin-bottom: 209rem;
+  }
+  .container_services .services {
+    width: 100%;
+  }
+  .container_services .services .service {
+    padding: 1rem 2.5rem;
+  }
+  .container_services .services .service i {
+    font-size: 2rem;
+  }
+  .container_services .services .service h4 {
+    font-size: 1rem;
+  }
+  .container_services .services .service p {
+    font-size: 0.8rem;
   }
 }
 * {
@@ -215,8 +318,15 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
 p {
   margin-bottom: 0;
+}
+
+section {
+  padding: 1rem;
 }
 
 .wave {
@@ -224,6 +334,9 @@ p {
 }
 
 @media (min-width: 767px) {
+  section {
+    padding: 1rem 2rem;
+  }
   .wave {
     margin-top: -4rem;
   }

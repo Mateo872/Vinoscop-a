@@ -1,0 +1,64 @@
+.container_services {
+  width: 90%;
+  margin: 1.5rem auto 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  padding: 0;
+  .services {
+    width: 42rem;
+    display: flex;
+    justify-content: space-between;
+    .service {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background-color: $color-secondary;
+      padding: 0.5rem 1rem;
+      border-radius: 0.8rem;
+      scroll-snap-align: center;
+      i {
+        color: $color-primary;
+        font-size: 1.3rem;
+      }
+      h4 {
+        font-size: 0.7rem;
+        font-weight: bold;
+        color: #000;
+      }
+      p {
+        font-size: 0.6rem;
+        color: $color-tertiary;
+      }
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .container_services {
+    .services {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 989px) {
+  .container_services {
+    .services {
+      width: 100%;
+      .service {
+        padding: 1rem 2.5rem;
+        i {
+          font-size: 2rem;
+        }
+        h4 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+    margin-bottom: 209rem;
+  }
+}

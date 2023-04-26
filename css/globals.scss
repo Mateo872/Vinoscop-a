@@ -2,6 +2,7 @@
 
 @import "variables";
 @import "header";
+@import "services";
 
 * {
   margin: 0;
@@ -15,8 +16,15 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
 p {
   margin-bottom: 0;
+}
+
+section {
+  padding: 1rem;
 }
 
 .wave {
@@ -24,6 +32,9 @@ p {
 }
 
 @media (min-width: 767px) {
+  section {
+    padding: 1rem 2rem;
+  }
   .wave {
     margin-top: -4rem;
   }
