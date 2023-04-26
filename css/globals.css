@@ -15,7 +15,6 @@ header nav {
   font-size: 1.6rem;
   color: #fff;
   padding: 1rem;
-  padding-bottom: 0;
   position: fixed;
   top: 0;
   margin-bottom: 20rem;
@@ -23,6 +22,7 @@ header nav {
   opacity: 0;
   animation-delay: 1s;
   z-index: 1;
+  transition: 0.3s;
 }
 header nav .nav_container {
   width: 100%;
@@ -265,6 +265,10 @@ header .container_carac i {
   overflow-y: hidden;
   scroll-snap-type: x proximity;
   padding: 0;
+  margin-bottom: 209rem;
+}
+.container_services::-webkit-scrollbar {
+  width: 0;
 }
 .container_services .services {
   width: 42rem;
@@ -300,9 +304,6 @@ header .container_carac i {
   }
 }
 @media (min-width: 989px) {
-  .container_services {
-    margin-bottom: 209rem;
-  }
   .container_services .services {
     width: 100%;
   }
