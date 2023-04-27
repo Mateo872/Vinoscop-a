@@ -58,6 +58,99 @@
         }
       }
     }
+    .slider_container_products {
+      margin-top: 3rem;
+      margin-bottom: 200rem;
+      overflow: auto;
+      padding-bottom: 1.8rem;
+      &::-webkit-scrollbar {
+        height: 0.4rem;
+        background-color: transparent;
+        border-radius: 0.45rem;
+        border: 1px solid $color-secondary;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $color-secondary;
+        border-radius: 0.45rem;
+        &:hover {
+          background-color: $color-secondary;
+        }
+        &:active {
+          background-color: $color-secondary;
+        }
+      }
+      .slider_products {
+        width: 700%;
+        display: flex;
+        justify-content: space-between;
+        .product {
+          height: 20rem;
+          width: 12rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: center;
+          scroll-snap-align: center;
+          gap: 0.2rem;
+          background-color: $color-secondary;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          padding: 0.5rem;
+          &_image {
+            width: 6rem;
+            height: 6rem;
+            z-index: 1;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          h4 {
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 1;
+          }
+          p {
+            width: 85%;
+            margin: 0 auto;
+            font-size: 0.8rem;
+            z-index: 1;
+          }
+          span {
+            font-size: 0.8rem;
+          }
+          &_price {
+            display: flex;
+            gap: 0.4rem;
+            color: #519210;
+            z-index: 1;
+            .price {
+              font-weight: bold;
+            }
+            .discount {
+              font-weight: 400;
+              text-decoration: line-through;
+            }
+          }
+          &_overlay {
+            width: 1000%;
+            height: 6rem;
+            position: absolute;
+            bottom: -1.8rem;
+            background-color: $color-primary;
+            transform: rotate(163deg);
+          }
+          .bi-basket {
+            position: absolute;
+            bottom: 1rem;
+            color: $color-secondary;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -99,6 +192,21 @@
           }
         }
       }
+      .slider_container_products {
+        .slider_products {
+          width: 300%;
+          gap: 1.2rem;
+          .product {
+            height: 20rem;
+            p {
+              font-size: 0.8rem;
+            }
+            span {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -131,6 +239,67 @@
           }
         }
       }
+      .slider_container_products {
+        .slider_products {
+          width: 180%;
+          gap: 1.2rem;
+          .product {
+            width: 30rem;
+            height: 22rem;
+            cursor: pointer;
+            p {
+              font-size: 0.8rem;
+            }
+            &_overlay {
+              height: 7rem;
+              bottom: -2rem;
+            }
+            &:hover .product_overlay {
+              height: 1000%;
+              transition: 1s ease-in-out;
+            }
+            &:hover {
+              justify-content: center;
+              gap: 1rem;
+              transition: 0.3s ease-in-out;
+            }
+            &:hover h4 {
+              color: $color-secondary;
+              transition: 0.3s ease-in-out;
+            }
+            &:hover p {
+              color: $color-secondary;
+              transition: 0.3s ease-in-out;
+            }
+            &:hover img {
+              transform: scale(1.2);
+              transition: 0.3s ease-in-out;
+            }
+            &:hover .bi-basket {
+              display: block;
+              color: $color-secondary;
+              font-size: 1.5rem;
+              z-index: 1;
+              animation: cart 1s forwards;
+            }
+            .bi-basket {
+              display: none;
+              position: static;
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@keyframes cart {
+  from {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }
