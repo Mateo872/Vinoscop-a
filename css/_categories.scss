@@ -1,6 +1,5 @@
 .container_categories {
   .categories {
-    margin-bottom: 200rem;
     .container_slider {
       display: flex;
       justify-content: center;
@@ -62,6 +61,7 @@
     .categories {
       .container_slider {
         .categories_slider {
+          width: 100%;
           .slider {
             gap: 2.5rem;
             .categorie {

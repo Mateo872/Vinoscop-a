@@ -311,9 +311,6 @@ header .container_carac i {
     font-size: 0.8rem;
   }
 }
-.container_categories .categories {
-  margin-bottom: 200rem;
-}
 .container_categories .categories .container_slider {
   display: flex;
   justify-content: center;
@@ -369,6 +366,9 @@ header .container_carac i {
 }
 
 @media (min-width: 767px) {
+  .container_categories .categories .container_slider .categories_slider {
+    width: 100%;
+  }
   .container_categories .categories .container_slider .categories_slider .slider {
     gap: 2.5rem;
   }
@@ -399,6 +399,132 @@ header .container_carac i {
   }
   .container_categories .categories .container_slider .arrow_slider:hover {
     opacity: 1;
+  }
+}
+.container_products .products h3 {
+  margin: -1.5rem 0 1.5rem;
+}
+.container_products .products .container_filters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container_products .products .container_filters .filters {
+  width: 80%;
+  display: flex;
+  overflow: auto;
+  gap: 1rem;
+}
+.container_products .products .container_filters .filters .filter {
+  cursor: pointer;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  transition: 0.2s;
+}
+.container_products .products .container_filters .filters .filter_active {
+  color: #fff;
+  background-color: #ff8500;
+}
+.container_products .products .container_filters .filters select {
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
+.container_products .products .container_filters .container_search {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+}
+.container_products .products .container_filters .container_search input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0 0.3rem;
+}
+.container_products .products .container_filters .container_search input::-moz-placeholder {
+  font-size: 0.8rem;
+}
+.container_products .products .container_filters .container_search input::placeholder {
+  font-size: 0.8rem;
+}
+.container_products .products .container_filters .container_search i {
+  margin-right: 0.3rem;
+}
+
+@media (min-width: 767px) {
+  .container_products .products .container_filters {
+    flex-direction: row;
+    gap: 1.2rem;
+  }
+  .container_products .products .container_filters .filters {
+    width: 58%;
+    justify-content: space-between;
+  }
+  .container_products .products .container_filters .container_search {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container_products .products .container_filters .container_search input {
+    width: 0%;
+    padding: 0;
+  }
+  .container_products .products .container_filters .container_search i {
+    margin-right: 0;
+  }
+  .container_products .products .container_filters .container_search:hover {
+    width: 8rem;
+    transition: 0.3s;
+  }
+  .container_products .products .container_filters .container_search:hover input {
+    width: 100%;
+    padding: 0.2rem;
+    transition: 0.3s;
+  }
+  .container_products .products .container_filters .container_search:hover i {
+    margin-right: 0.1rem;
+    transition: 0.3s;
+  }
+}
+@media (min-width: 989px) {
+  .container_products .products h3 {
+    margin: 2.5rem 0 3rem;
+  }
+  .container_products .products .container_filters {
+    gap: 2rem;
+  }
+  .container_products .products .container_filters .filters {
+    width: 58%;
+    justify-content: space-between;
+  }
+  .container_products .products .container_filters .filters .filter {
+    padding: 0.4rem 2.4rem;
+    font-size: 1rem;
+  }
+  .container_products .products .container_filters .filters select {
+    padding: 0.4rem 2.4rem;
+    font-size: 1rem;
+  }
+  .container_products .products .container_filters .container_search {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  .container_products .products .container_filters .container_search:hover {
+    width: 12rem;
   }
 }
 * {
